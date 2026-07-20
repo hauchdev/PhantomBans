@@ -40,7 +40,7 @@
         <bstats-bukkit.version>3.0.0</bstats-bukkit.version>
         <bstats-bungee.version>3.0.0</bstats-bungee.version>
         <bstats-velocity.version>3.0.0</bstats-velocity.version>
-        <adventure.version>4.17.0</adventure.version>
+        <adventure.version>5.2.0</adventure.version>
         <junit5.version>5.9.2</junit5.version>
     </properties>
 
