@@ -1,0 +1,6 @@
+name: PhantomBans
+version: '1.0-SNAPSHOT'
+main: dev.hauch.phantomBans.bungee.PhantomBans
+
+authors: [ Hauchdev ]
+description: A multi-platform punishment system

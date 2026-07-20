@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bukkit/PhantomBans-Bukkit.iml" filepath="$PROJECT_DIR$/bukkit/PhantomBans-Bukkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bundle/PhantomBans-Bundle.iml" filepath="$PROJECT_DIR$/bundle/PhantomBans-Bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bungee/PhantomBans-Bungee.iml" filepath="$PROJECT_DIR$/bungee/PhantomBans-Bungee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/PhantomBans-Core.iml" filepath="$PROJECT_DIR$/core/PhantomBans-Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/velocity/PhantomBans-Velocity.iml" filepath="$PROJECT_DIR$/velocity/PhantomBans-Velocity.iml" />
+    </modules>
+  </component>
+</project>

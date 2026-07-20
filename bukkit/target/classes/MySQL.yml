@@ -1,0 +1,10 @@
+# PhantomBans MySQL Configuration
+# Required if UseMySQL is set to true in config.yml
+
+MySQL:
+  IP: "localhost"
+  Port: 3306
+  DB-Name: "phantombans"
+  Username: "root"
+  Password: "password"
+  Properties: "verifyServerCertificate=false&useSSL=false&useUnicode=true&characterEncoding=utf8"

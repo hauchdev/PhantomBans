@@ -1,0 +1,124 @@
+# ============================================================================ #
+#                         PhantomBans Configuration                            #
+# ============================================================================ #
+# A multi-platform punishment system (Bukkit, BungeeCord, Waterfall, Velocity) #
+# ============================================================================ #
+
+# --------------------------------------------------------------------------- #
+# TIME SETTINGS                                                               #
+# --------------------------------------------------------------------------- #
+# TimeDiff: Server time difference in hours (if your server time differs from
+#           your actual timezone). Set to 0 if your server time is correct.
+TimeDiff: 0
+
+# DateFormat: The format used to display dates throughout the plugin.
+#             See: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+DateFormat: "dd.MM.yyyy-HH:mm"
+
+# --------------------------------------------------------------------------- #
+# DATABASE SETTINGS                                                           #
+# --------------------------------------------------------------------------- #
+# UseMySQL: Set to true to use MySQL, false for local HSQLDB storage.
+#           When using MySQL, ensure MySQL.yml is properly configured.
+UseMySQL: false
+
+# LockdownOnError: When true, players will be kicked with an error message
+#                  if the database fails to load their data.
+LockdownOnError: true
+
+# --------------------------------------------------------------------------- #
+# DEBUG / LOGGING                                                             #
+# --------------------------------------------------------------------------- #
+# Debug: Enables detailed debug output in the console.
+Debug: false
+
+# DetailedEnableMessage: Show a detailed formatting message on plugin enable.
+DetailedEnableMessage: true
+
+# DetailedDisableMessage: Show a detailed formatting message on plugin disable.
+DetailedDisableMessage: true
+
+# Log Purge Days: How many days to keep compressed logs before auto-deleting.
+Log Purge Days: 30
+
+# --------------------------------------------------------------------------- #
+# MESSAGES / PREFIX                                                           #
+# --------------------------------------------------------------------------- #
+# Disable Prefix: Remove the plugin prefix from all messages.
+Disable Prefix: false
+
+# DefaultReason: The default reason used when no reason is provided.
+DefaultReason: "Misconduct"
+
+# --------------------------------------------------------------------------- #
+# PERMISSIONS                                                                 #
+# --------------------------------------------------------------------------- #
+# EnableAllPermissionNodes: When true, a player with a permission node like
+#                           "pb.ban.all" can use any ban sub-command.
+EnableAllPermissionNodes: false
+
+# ExemptPlayers: A list of players who are exempt from all punishments.
+#                These players cannot be banned, muted, warned, or kicked.
+ExemptPlayers: []
+# Examples:
+# ExemptPlayers:
+#   - "Notch"
+#   - "jeb_"
+
+# --------------------------------------------------------------------------- #
+# MUTED COMMANDS                                                              #
+# --------------------------------------------------------------------------- #
+# MuteCommands: A list of commands that muted players are blocked from using.
+#               Only commands starting with "/" should be listed here.
+MuteCommands:
+  - "/msg"
+  - "/tell"
+  - "/w"
+  - "/whisper"
+  - "/reply"
+  - "/r"
+  - "/me"
+  - "/action"
+  - "/mail"
+  - "/pmsg"
+  - "/t"
+  - "/pm"
+  - "/minecraft:msg"
+  - "/minecraft:tell"
+  - "/minecraft:me"
+
+# --------------------------------------------------------------------------- #
+# WARN ACTIONS                                                                #
+# --------------------------------------------------------------------------- #
+# WarnActions: Actions to execute when a player reaches a certain amount of
+#              active warnings. Use %PLAYER%, %REASON%, and %COUNT% placeholders.
+#              The action for the highest reached warning count will be used.
+WarnActions:
+  1: "msg %PLAYER% &cYou have received your first warning!"
+  3: "kick %PLAYER% &cYou have been kicked for accumulating 3 warnings."
+  5: "tempban %PLAYER% 7d &cAuto-banned for 5 active warnings."
+  # 10: "ban %PLAYER% &cAuto-banned for 10 active warnings."
+
+# --------------------------------------------------------------------------- #
+# UUID FETCHER                                                                #
+# --------------------------------------------------------------------------- #
+UUID-Fetcher:
+  # Dynamic: Automatically select the best UUID fetcher mode based on the
+  #          server's configuration (online/offline mode) and platform.
+  Dynamic: true
+
+  # Enabled: Whether UUID fetching is enabled at all.
+  Enabled: true
+
+  # Intern: Use the server's built-in UUID resolver (usually for online mode).
+  Intern: false
+
+  # REST-API: Primary REST API configuration for UUID resolution.
+  REST-API:
+    URL: "https://api.mojang.com/users/profiles/minecraft/%NAME%?%TIMESTAMP%"
+    Key: "id"
+
+  # BackUp-API: Fallback REST API when the primary one fails.
+  BackUp-API:
+    URL: "https://api.ashcon.app/mojang/v2/user/%NAME%"
+    Key: "uuid"

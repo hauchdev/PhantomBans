@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>PhantomBans</artifactId>
+    <groupId>dev.hauch</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>PhantomBans-Bundle</artifactId>
+  <name>PhantomBans-Bundle</name>
+  <description>Bundled JAR with all platform implementations shaded</description>
+  <build>
+    <resources>
+      <resource>
+        <filtering>true</filtering>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <relocations>
+            <relocation>
+              <pattern>org.apache.commons</pattern>
+              <shadedPattern>dev.hauch.phantomBans.shaded.org.apache.commons</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.slf4j</pattern>
+              <shadedPattern>dev.hauch.phantomBans.shaded.org.slf4j</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>com.zaxxer.hikari</pattern>
+              <shadedPattern>dev.hauch.phantomBans.shaded.com.zaxxer.hikari</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.hsqldb</pattern>
+              <shadedPattern>dev.hauch.phantomBans.shaded.org.hsqldb</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.bstats</pattern>
+              <shadedPattern>dev.hauch.phantomBans.shaded.org.bstats</shadedPattern>
+            </relocation>
+          </relocations>
+          <transformers>
+            <transformer />
+          </transformers>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

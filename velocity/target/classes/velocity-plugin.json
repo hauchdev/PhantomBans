@@ -1,0 +1,1 @@
+{"id":"phantombans","name":"PhantomBans","version":"1.0-SNAPSHOT","description":"A multi-platform punishment system","authors":["Hauchdev"],"dependencies":[],"main":"dev.hauch.phantomBans.velocity.PhantomBans"}

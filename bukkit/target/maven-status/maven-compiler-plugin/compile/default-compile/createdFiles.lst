@@ -1,0 +1,8 @@
+dev\hauch\phantomBans\bukkit\listener\CommandReceiver.class
+dev\hauch\phantomBans\bukkit\BukkitMethods.class
+dev\hauch\phantomBans\bukkit\event\PunishmentEvent.class
+dev\hauch\phantomBans\bukkit\event\RevokePunishmentEvent.class
+dev\hauch\phantomBans\bukkit\listener\CommandListener.class
+dev\hauch\phantomBans\bukkit\listener\ConnectionListener.class
+dev\hauch\phantomBans\bukkit\PhantomBans.class
+dev\hauch\phantomBans\bukkit\listener\ChatListener.class

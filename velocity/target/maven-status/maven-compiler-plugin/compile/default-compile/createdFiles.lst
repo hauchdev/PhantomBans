@@ -1,0 +1,8 @@
+dev\hauch\phantomBans\velocity\listener\ChatListenerVelocity.class
+dev\hauch\phantomBans\velocity\event\PunishmentEvent.class
+dev\hauch\phantomBans\velocity\event\RevokePunishmentEvent.class
+dev\hauch\phantomBans\velocity\VelocityMethods$1.class
+velocity-plugin.json
+dev\hauch\phantomBans\velocity\listener\ConnectionListenerVelocity.class
+dev\hauch\phantomBans\velocity\VelocityMethods.class
+dev\hauch\phantomBans\velocity\PhantomBans.class

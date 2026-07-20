@@ -1,0 +1,7 @@
+dev\hauch\phantomBans\bungee\listener\CommandReceiverBungee.class
+dev\hauch\phantomBans\bungee\listener\ChatListenerBungee.class
+dev\hauch\phantomBans\bungee\PhantomBans.class
+dev\hauch\phantomBans\bungee\BungeeMethods.class
+dev\hauch\phantomBans\bungee\event\RevokePunishmentEvent.class
+dev\hauch\phantomBans\bungee\listener\ConnectionListenerBungee.class
+dev\hauch\phantomBans\bungee\event\PunishmentEvent.class
