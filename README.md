@@ -10,10 +10,10 @@
   </p>
 
   <p>
-    <a href="https://github.com/Hauchdev/Phantom-Bans/actions"><img src="https://img.shields.io/github/actions/workflow/status/Hauchdev/Phantom-Bans/ci.yml?branch=master&style=flat-square&logo=github" alt="CI Status"/></a>
-    <a href="https://github.com/Hauchdev/Phantom-Bans/releases"><img src="https://img.shields.io/github/v/release/Hauchdev/Phantom-Bans?style=flat-square&logo=github" alt="Release"/></a>
-    <a href="https://github.com/Hauchdev/Phantom-Bans/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Hauchdev/Phantom-Bans?style=flat-square" alt="License"/></a>
-    <a href="https://github.com/Hauchdev/Phantom-Bans/issues"><img src="https://img.shields.io/github/issues/Hauchdev/Phantom-Bans?style=flat-square" alt="Issues"/></a>
+    <a href="https://github.com/Hauchdev/PhantomBans/actions"><img src="https://img.shields.io/github/actions/workflow/status/Hauchdev/PhantomBans/ci.yml?branch=master&style=flat-square&logo=github" alt="CI Status"/></a>
+    <a href="https://github.com/Hauchdev/PhantomBans/releases"><img src="https://img.shields.io/github/v/release/Hauchdev/PhantomBans?style=flat-square&logo=github" alt="Release"/></a>
+    <a href="https://github.com/Hauchdev/PhantomBans/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Hauchdev/PhantomBans?style=flat-square" alt="License"/></a>
+    <a href="https://github.com/Hauchdev/PhantomBans/issues"><img src="https://img.shields.io/github/issues/Hauchdev/PhantomBans?style=flat-square" alt="Issues"/></a>
     <img src="https://img.shields.io/badge/Java-17%2B-red?style=flat-square&logo=openjdk" alt="Java 17+"/>
     <img src="https://img.shields.io/badge/Minecraft-1.18%2B-blue?style=flat-square&logo=minecraft" alt="Minecraft 1.18+"/>
   </p>
@@ -95,7 +95,7 @@ Inspired by the legendary AdvancedBan, PhantomBans is built from the ground up w
 
 ### Steps
 
-1. **Download** the latest JAR from the [Releases page](https://github.com/Hauchdev/Phantom-Bans/releases/latest)
+1. **Download** the latest JAR from the [Releases page](https://github.com/Hauchdev/PhantomBans/releases/latest)
 
    | Platform | File |
    |----------|------|
@@ -315,7 +315,7 @@ PhantomBans exposes a public API for other plugins to integrate with.
 
 <dependency>
   <groupId>com.github.Hauchdev</groupId>
-  <artifactId>Phantom-Bans</artifactId>
+  <artifactId>PhantomBans</artifactId>
   <version>Tag</version>
   <scope>provided</scope>
 </dependency>
@@ -358,7 +358,7 @@ PhantomBansAPI.warnPlayer("Dinnerbone", "Console", "First warning");
 
 ```bash
 # Clone the repository
-git clone https://github.com/Hauchdev/Phantom-Bans.git
+git clone https://github.com/Hauchdev/PhantomBans.git
 cd Phantom-Bans
 
 # Compile and package
@@ -404,8 +404,8 @@ The project uses JUnit 5 for unit testing. Tests are located in:
 
 Contributions are welcome! Here's how you can help:
 
-1. **🐛 Report bugs** — Open an [issue](https://github.com/Hauchdev/Phantom-Bans/issues) with detailed reproduction steps
-2. **💡 Suggest features** — Open an [issue](https://github.com/Hauchdev/Phantom-Bans/issues) with your idea
+1. **🐛 Report bugs** — Open an [issue](https://github.com/Hauchdev/PhantomBans/issues) with detailed reproduction steps
+2. **💡 Suggest features** — Open an [issue](https://github.com/Hauchdev/PhantomBans/issues) with your idea
 3. **🔀 Submit PRs** — Fork the repo, make your changes, and open a pull request
 
 ### Development Guidelines
@@ -429,13 +429,13 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
     <strong>PhantomBans</strong> — Made with ❤️ by <a href="https://github.com/Hauchdev">Hauchdev</a>
   </p>
   <p>
-    <a href="https://github.com/Hauchdev/Phantom-Bans/issues">Report Bug</a> •
-    <a href="https://github.com/Hauchdev/Phantom-Bans/issues">Request Feature</a> •
-    <a href="https://github.com/Hauchdev/Phantom-Bans/discussions">Discussions</a>
+    <a href="https://github.com/Hauchdev/PhantomBans/issues">Report Bug</a> •
+    <a href="https://github.com/Hauchdev/PhantomBans/issues">Request Feature</a> •
+    <a href="https://github.com/Hauchdev/PhantomBans/discussions">Discussions</a>
   </p>
   <br/>
   <p>
-    <img src="https://img.shields.io/github/stars/Hauchdev/Phantom-Bans?style=social" alt="Stars"/>
-    <img src="https://img.shields.io/github/forks/Hauchdev/Phantom-Bans?style=social" alt="Forks"/>
+    <img src="https://img.shields.io/github/stars/Hauchdev/PhantomBans?style=social" alt="Stars"/>
+    <img src="https://img.shields.io/github/forks/Hauchdev/PhantomBans?style=social" alt="Forks"/>
   </p>
 </div>

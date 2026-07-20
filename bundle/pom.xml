@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>dev.hauch</groupId>
-        <artifactId>Phantom-Bans</artifactId>
+        <artifactId>PhantomBans</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
