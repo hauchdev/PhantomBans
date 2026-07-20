@@ -1,0 +1,19 @@
+# PhantomBans Message Layouts
+# You can define custom layouts for punishments
+# Use @LayoutName [Reason] to use a layout
+
+Message:
+  Example:
+    - "&8&m&l----------------------------------------"
+    - ""
+    - "&c&lYou have been punished!"
+    - "&7This is an example layout message."
+    - ""
+    - "&8&m&l----------------------------------------"
+
+# Time layouts for automatic punishment time calculation
+Time:
+  example:
+    - "1d"
+    - "7d"
+    - "30d"
