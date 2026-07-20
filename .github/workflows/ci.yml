@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main, develop ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+    name: "Build & Test (JDK ${{ matrix.java }})"
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        java: [ 17, 21 ]
+      fail-fast: false
+
+    steps:
+      - name: "☁️ Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "☕ Setup Java ${{ matrix.java }}"
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: "🔨 Compile"
+        run: mvn compile --batch-mode -DskipTests
+
+      - name: "🧪 Run tests"
+        run: mvn test --batch-mode -DskipTests=false
+
+      - name: "📦 Package"
+        run: mvn package --batch-mode -DskipTests
+
+      - name: "📤 Upload artifacts"
+        uses: actions/upload-artifact@v4
+        with:
+          name: PhantomBans-JDK${{ matrix.java }}
+          path: |
+            bukkit/target/[!original]*.jar
+            bungee/target/[!original]*.jar
+            velocity/target/[!original]*.jar
+            bundle/target/[!original]*.jar
+          if-no-files-found: warn

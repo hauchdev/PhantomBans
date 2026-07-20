@@ -1,0 +1,62 @@
+# Dependabot configuration
+# See: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # ── Maven (Java) dependencies ─────────────────────────────────────────────
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Madrid"
+    open-pull-requests-limit: 15
+    labels:
+      - "dependencies"
+      - "maven"
+    reviewers:
+      - "Hauchdev"
+    # Group minor/patch updates together to reduce noise
+    groups:
+      adventure:
+        patterns:
+          - "net.kyori:adventure-*"
+        update-types:
+          - "minor"
+          - "patch"
+      bstats:
+        patterns:
+          - "org.bstats:*"
+        update-types:
+          - "minor"
+          - "patch"
+      testing:
+        patterns:
+          - "org.junit.jupiter:*"
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      # Paper API is tied to a specific Minecraft version; update carefully
+      - dependency-name: "io.papermc.paper:paper-api"
+        update-types: [ "version-update:semver-major" ]
+      # Waterfall API is similarly version-locked
+      - dependency-name: "io.github.waterfallmc:waterfall-api"
+        update-types: [ "version-update:semver-major" ]
+      # Velocity API version locks
+      - dependency-name: "com.velocitypowered:velocity-api"
+        update-types: [ "version-update:semver-major" ]
+
+  # ── GitHub Actions (workflow files) ────────────────────────────────────────
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Madrid"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github-actions"

@@ -1,0 +1,20 @@
+# PhantomBans Message Layouts
+# You can define custom layouts for punishments
+# Use @LayoutName [Reason] to use a layout
+# Uses MiniMessage format (<red>, <gray>, <bold>, <gradient>, etc.)
+
+Message:
+  Example:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been punished!"
+    - "<dark_gray>┃ <gray>This is an example layout message."
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Time layouts for automatic punishment time calculation
+Time:
+  example:
+    - "1d"
+    - "7d"
+    - "30d"

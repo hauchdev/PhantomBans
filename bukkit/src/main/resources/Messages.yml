@@ -1,0 +1,418 @@
+# ============================================================================ #
+#                         PhantomBans Messages                                 #
+# ============================================================================ #
+# Uses MiniMessage format (<red>, <gray>, <bold>, <gradient>, etc.)
+#
+# Documentation: https://docs.advntr.dev/minimessage/format.html
+#
+# Placeholders:
+#   %NAME%      - Target player name
+#   %OPERATOR%  - Staff who executed the command
+#   %REASON%    - Punishment reason
+#   %DURATION%  - Punishment duration text
+#   %ID%        - Punishment numeric ID
+#   %HEXID%     - Punishment hexadecimal ID
+#   %DATE%      - Punishment creation date
+#   %COUNT%     - Warning/note count
+#   %PAGE%      - Current page number
+#   %CURRENT_PAGE% - Current page
+#   %TOTAL_PAGES% - Total pages
+#   %NEXT_PAGE%   - Next page number
+# ============================================================================ #
+
+# --------------------------------------------------------------------------- #
+# GENERAL                                                                     #
+# --------------------------------------------------------------------------- #
+General:
+  Prefix: "<dark_gray>[<red>PhantomBans<dark_gray>]</dark_gray>"
+  NoPerms: "<red>You don't have permission to use this command!"
+  FailedFetch: "<red>Failed to fetch <white>%NAME%<red>'s UUID!"
+  LayoutNotFound: "<red>Layout '<white>%NAME%<red>' not found!"
+  TimeLayoutD: "<white>%DD% <gray>days <white>%HH% <gray>hours <white>%MM% <gray>minutes <white>%SS% <gray>seconds"
+  TimeLayoutH: "<white>%HH% <gray>hours <white>%MM% <gray>minutes <white>%SS% <gray>seconds"
+  TimeLayoutM: "<white>%MM% <gray>minutes <white>%SS% <gray>seconds"
+  TimeLayoutS: "<white>%SS% <gray>seconds"
+
+# --------------------------------------------------------------------------- #
+# BAN                                                                         #
+# --------------------------------------------------------------------------- #
+Ban:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/ban [Name] [Reason]"
+  Done: "<red><italic>%NAME% <gray>was successfully banned!"
+  Exempt: "<gray>You are not able to ban <red><italic>%NAME%"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was banned by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been banned!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>Operator: <white>%OPERATOR%"
+    - "<dark_gray>┃ <gray>Date: <white>%DATE%"
+    - "<dark_gray>┃ <gray>ID: <white>#%HEXID%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# TEMP BAN                                                                    #
+# --------------------------------------------------------------------------- #
+Tempban:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/tempban [Name] [Duration] [Reason]"
+  Done: "<red><italic>%NAME% <gray>was successfully temp-banned!"
+  Exempt: "<gray>You are not able to temp-ban <red><italic>%NAME%"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was temp-banned by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+    - "  <gray>Duration: <italic>%DURATION%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been temporarily banned!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>Operator: <white>%OPERATOR%"
+    - "<dark_gray>┃ <gray>Duration: <white>%DURATION%"
+    - "<dark_gray>┃ <gray>Date: <white>%DATE%"
+    - "<dark_gray>┃ <gray>ID: <white>#%HEXID%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# IP BAN                                                                      #
+# --------------------------------------------------------------------------- #
+Ipban:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/ipban [Name/IP] [Reason]"
+  Done: "<red><italic>%NAME% <gray>was successfully IP-banned!"
+  IpNotCashed: "<red>IP of <white>%NAME% <red>is not cached!"
+  Exempt: "<gray>You are not able to IP-ban <red><italic>%NAME%"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was IP-banned by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been IP-banned!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>Operator: <white>%OPERATOR%"
+    - "<dark_gray>┃ <gray>Date: <white>%DATE%"
+    - "<dark_gray>┃ <gray>ID: <white>#%HEXID%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# TEMP IP BAN                                                                 #
+# --------------------------------------------------------------------------- #
+Tempipban:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/tempipban [Name/IP] [Duration] [Reason]"
+  Done: "<red><italic>%NAME% <gray>was successfully temp-IP-banned!"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was temp-IP-banned by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+    - "  <gray>Duration: <italic>%DURATION%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been temporarily IP-banned!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>Operator: <white>%OPERATOR%"
+    - "<dark_gray>┃ <gray>Duration: <white>%DURATION%"
+    - "<dark_gray>┃ <gray>Date: <white>%DATE%"
+    - "<dark_gray>┃ <gray>ID: <white>#%HEXID%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# MUTE                                                                        #
+# --------------------------------------------------------------------------- #
+Mute:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/mute [Name] [Reason]"
+  Done: "<red><italic>%NAME% <gray>was successfully muted!"
+  Exempt: "<gray>You are not able to mute <red><italic>%NAME%"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was muted by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been muted!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>Operator: <white>%OPERATOR%"
+    - "<dark_gray>┃ <gray>Date: <white>%DATE%"
+    - "<dark_gray>┃ <gray>ID: <white>#%HEXID%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# TEMP MUTE                                                                   #
+# --------------------------------------------------------------------------- #
+Tempmute:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/tempmute [Name] [Duration] [Reason]"
+  Done: "<red><italic>%NAME% <gray>was successfully temp-muted!"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was temp-muted by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+    - "  <gray>Duration: <italic>%DURATION%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been temporarily muted!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>Operator: <white>%OPERATOR%"
+    - "<dark_gray>┃ <gray>Duration: <white>%DURATION%"
+    - "<dark_gray>┃ <gray>Date: <white>%DATE%"
+    - "<dark_gray>┃ <gray>ID: <white>#%HEXID%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# KICK                                                                        #
+# --------------------------------------------------------------------------- #
+Kick:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/kick [Name] [Reason]"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was kicked by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been kicked!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>Operator: <white>%OPERATOR%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# WARN                                                                        #
+# --------------------------------------------------------------------------- #
+Warn:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/warn [Name] [Reason]"
+  Done: "<red><italic>%NAME% <gray>was successfully warned!"
+  Exempt: "<gray>You are not able to warn <red><italic>%NAME%"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was warned by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+    - "  <yellow>Warning #%COUNT%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been warned!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>ID: <white>#%HEXID%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# TEMP WARN                                                                   #
+# --------------------------------------------------------------------------- #
+Tempwarn:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/tempwarn [Name] [Duration] [Reason]"
+  Done: "<red><italic>%NAME% <gray>was successfully temp-warned!"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>was temp-warned by <yellow><italic>%OPERATOR%"
+    - "  <gray>Reason: <italic>%REASON%"
+    - "  <gray>Duration: <italic>%DURATION%"
+    - "  <yellow>Warning #%COUNT%"
+  Layout:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <red><bold>You have been temporarily warned!"
+    - "<dark_gray>┃"
+    - "<dark_gray>┃ <gray>Reason: <white>%REASON%"
+    - "<dark_gray>┃ <gray>Duration: <white>%DURATION%"
+    - "<dark_gray>┃ <gray>ID: <white>#%HEXID%"
+    - "<dark_gray>┃"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# --------------------------------------------------------------------------- #
+# NOTE                                                                        #
+# --------------------------------------------------------------------------- #
+Note:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/note [Name] [Note]"
+  Done: "<red><italic>%NAME% <gray>was successfully noted!"
+  Exempt: "<gray>You are not able to note <red><italic>%NAME%"
+  Notification:
+    - "<dark_gray>[<red>!<dark_gray>] <red><italic>%NAME% <gray>got noted by <yellow><italic>%OPERATOR%"
+    - "  <gray>For the reason <italic>%REASON%"
+
+# --------------------------------------------------------------------------- #
+# UN-BAN                                                                      #
+# --------------------------------------------------------------------------- #
+UnBan:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/unban [Name]"
+  Done: "<red><italic>%NAME% <gray>was successfully unbanned!"
+  NotFound: "<red>%NAME% <red>is not banned!"
+  Notification: "<yellow><italic>%OPERATOR% <gray>unbanned <red><italic>%NAME%"
+
+# --------------------------------------------------------------------------- #
+# UN-MUTE                                                                     #
+# --------------------------------------------------------------------------- #
+UnMute:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/unmute [Name]"
+  Done: "<red><italic>%NAME% <gray>was successfully unmuted!"
+  NotFound: "<red>%NAME% <red>is not muted!"
+  Notification: "<yellow><italic>%OPERATOR% <gray>unmuted <red><italic>%NAME%"
+
+# --------------------------------------------------------------------------- #
+# UN-WARN                                                                     #
+# --------------------------------------------------------------------------- #
+UnWarn:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/unwarn [ID] <dark_gray>or <gray><italic>/unwarn clear [Name]"
+  NotFound: "<red>Could not find warning #<white>%ID%"
+  Done: "<gray>Warning <green><italic>#%ID% <gray>was successfully deleted!"
+  Notification: "<yellow><italic>%OPERATOR% <gray>unwarned <red><italic>%NAME%"
+  Clear:
+    Empty: "<red><italic>%NAME% <gray>has no warnings!"
+    Done: "<gray>Cleared <green><italic>%COUNT% <gray>warnings"
+
+# --------------------------------------------------------------------------- #
+# UN-NOTE                                                                     #
+# --------------------------------------------------------------------------- #
+UnNote:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/unnote [ID] <dark_gray>or <gray><italic>/unnote clear [Name]"
+  NotFound: "<red>Could not find note #<white>%ID%"
+  Done: "<gray>Note <green><italic>#%ID% <gray>was successfully deleted!"
+  Notification: "<yellow><italic>%OPERATOR% <gray>unnoted <red><italic>%NAME%"
+  Clear:
+    Empty: "<red><italic>%NAME% <gray>has no notes!"
+    Done: "<gray>Cleared <green><italic>%COUNT% <gray>notes"
+
+# --------------------------------------------------------------------------- #
+# UN-PUNISH                                                                   #
+# --------------------------------------------------------------------------- #
+UnPunish:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/unpunish [ID]"
+  Done: "<gray>Punishment <green><italic>#%ID% <gray>was successfully deleted!"
+  NotFound: "<red>Could not find punishment #<white>%ID%"
+
+# --------------------------------------------------------------------------- #
+# CHANGE REASON                                                               #
+# --------------------------------------------------------------------------- #
+ChangeReason:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/change-reason [ID] [New Reason]"
+  Done: "<gray>Reason for punishment <green><italic>#%ID% <gray>has been updated!"
+  NotFound: "<red>Could not find a punishment with ID #<white>%ID%"
+
+# --------------------------------------------------------------------------- #
+# BAN LIST                                                                    #
+# --------------------------------------------------------------------------- #
+Banlist:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/banlist <Page>"
+  OutOfIndex: "<red>There is no page <white>%PAGE%<red>!"
+  NoEntries: "<red>There are no active bans!"
+  Header:
+    - "<gray>"
+    - "<red><bold>Active Bans"
+    - "<dark_gray>━<gray>"
+  Entry: "<dark_gray>┃ <white>%NAME% <gray>(<red>%REASON%<gray>) <dark_gray>[<white>#%ID%<dark_gray>]"
+  Footer: "<dark_gray>┃ <gray>Page <yellow><italic>%CURRENT_PAGE% <gray>of <yellow><italic>%TOTAL_PAGES%"
+  PageFooter: "<gray>Use <yellow><italic>/banlist %NEXT_PAGE% <gray>to see the next page"
+
+# --------------------------------------------------------------------------- #
+# HISTORY                                                                     #
+# --------------------------------------------------------------------------- #
+History:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/history [Name] <Page>"
+  OutOfIndex: "<red>There is no page <white>%PAGE%<red>!"
+  NoEntries: "<red>%NAME% <red>has no history yet!"
+  Header:
+    - "<gray>"
+    - "<red><bold>History for <white>%NAME%"
+    - "<dark_gray>━<gray>"
+  Entry:
+    - "<dark_gray>┃ <gray>%DATE% <dark_gray>| <red>%TYPE% <dark_gray>| <gray>By <italic>%OPERATOR%"
+    - "<dark_gray>┃ <dark_gray>└> <yellow>%REASON%"
+  Footer: "<dark_gray>┃ <gray>Page <yellow><italic>%CURRENT_PAGE% <gray>of <yellow><italic>%TOTAL_PAGES%"
+  PageFooter: "<gray>Use <yellow><italic>/history %NAME% %NEXT_PAGE% <gray>to see the next page"
+
+# --------------------------------------------------------------------------- #
+# WARNS                                                                       #
+# --------------------------------------------------------------------------- #
+Warns:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/warns [Name] <Page> <dark_gray>or <gray><italic>/warns <Page>"
+  OutOfIndex: "<red>There is no page <white>%PAGE%<red>!"
+  NoEntries: "<red><italic>%NAME% <gray>has no warnings yet"
+  Header:
+    - "<gray>"
+    - "<red><bold>Warnings for <white>%NAME%"
+    - "<dark_gray>━<gray>"
+  Entry:
+    - "<dark_gray>┃ <gray>%DATE% <dark_gray>| <red>Warning <dark_gray>| <gray>By <italic>%OPERATOR%"
+    - "<dark_gray>┃ <dark_gray>└> <yellow>%REASON%"
+  Footer: "<dark_gray>┃ <gray>Page <yellow><italic>%CURRENT_PAGE% <gray>of <yellow><italic>%TOTAL_PAGES%"
+  PageFooter: "<gray>Use <yellow><italic>/warns %NAME% %NEXT_PAGE% <gray>to see the next page"
+
+WarnsOwn:
+  OutOfIndex: "<red>There is no page <white>%PAGE%<red>!"
+  NoEntries: "<gray>You have no warnings yet"
+  Header:
+    - "<gray>"
+    - "<red><bold>Your Warnings"
+    - "<dark_gray>━<gray>"
+    - "<yellow><italic>Duration <dark_gray>| <gray><italic>Warned by"
+    - "<red><bold>#ID <dark_gray>> <gray><italic>Reason"
+    - "<gray>"
+  Entry:
+    - "<dark_gray>┃ <dark_gray>[<yellow>%DATE%<dark_gray>]"
+    - "<dark_gray>┃ <yellow>%DURATION% <dark_gray>| <gray>%OPERATOR%"
+    - "<dark_gray>┃ <red><bold>#%ID% <dark_gray>> <gray><italic>%REASON%"
+    - "<dark_gray>┃"
+  Footer: "<dark_gray>┃ <gray>Page <yellow><italic>%CURRENT_PAGE% <gray>of <yellow><italic>%TOTAL_PAGES% <dark_gray>| <gray>Active warnings: <yellow><italic>%COUNT%"
+  PageFooter: "<gray>Use <yellow><italic>/warns %NEXT_PAGE% <gray>to see the next page"
+
+# --------------------------------------------------------------------------- #
+# NOTES                                                                       #
+# --------------------------------------------------------------------------- #
+Notes:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/notes [Name] <Page> <dark_gray>or <gray><italic>/notes <Page>"
+  OutOfIndex: "<red>There is no page <white>%PAGE%<red>!"
+  NoEntries: "<red><italic>%NAME% <gray>has no notes yet"
+  Header:
+    - "<gray>"
+    - "<red><bold>Notes for <white>%NAME%"
+    - "<dark_gray>━<gray>"
+  Entry:
+    - "<dark_gray>┃ <gray>%DATE% <dark_gray>| <gray>By <italic>%OPERATOR% <dark_gray>(<red>#%ID%<dark_gray>)"
+    - "<dark_gray>┃ <dark_gray>└> <yellow>%REASON%"
+    - "<dark_gray>┃"
+  Footer: "<dark_gray>┃ <gray>Page <yellow><italic>%CURRENT_PAGE% <gray>of <yellow><italic>%TOTAL_PAGES% <dark_gray>| <gray>Notes: <yellow><italic>%COUNT%"
+  PageFooter: "<gray>Use <yellow><italic>/notes %NAME% %NEXT_PAGE% <gray>to see the next page"
+
+NotesOwn:
+  OutOfIndex: "<red>There is no page <white>%PAGE%<red>!"
+  NoEntries: "<gray>You have no notes yet"
+  Header:
+    - "<gray>"
+    - "<red><bold>Your Notes"
+    - "<dark_gray>━<gray>"
+  Entry:
+    - "<dark_gray>┃ <gray>%DATE% <dark_gray>| <gray>By <italic>%OPERATOR% <dark_gray>(<red>#%ID%<dark_gray>)"
+    - "<dark_gray>┃ <dark_gray>└> <yellow>%REASON%"
+    - "<dark_gray>┃"
+  Footer: "<dark_gray>┃ <gray>Page <yellow><italic>%CURRENT_PAGE% <gray>of <yellow><italic>%TOTAL_PAGES% <dark_gray>| <gray>Notes: <yellow><italic>%COUNT%"
+  PageFooter: "<gray>Use <yellow><italic>/notes %NEXT_PAGE% <gray>to see the next page"
+
+# --------------------------------------------------------------------------- #
+# CHECK                                                                       #
+# --------------------------------------------------------------------------- #
+Check:
+  Usage: "<red>Usage <dark_gray>» <gray><italic>/check [Name]"
+  Cached: "<green><bold>CACHED"
+  NotCached: "<red><bold>NOT CACHED"
+  Header: "<red><bold>━━━ <gray>Check: <white>%NAME% <gray>%CACHED% <red><bold>━━━"
+  UUID: "<red>UUID <dark_gray>» <gray>%UUID% <dark_gray>[%CACHED%<dark_gray>]"
+  IP: "<red>IP <dark_gray>» <gray>%IP% <dark_gray>[%CACHED%<dark_gray>]"
+  Geo: "<red>Geo <dark_gray>» <gray>%LOCATION%"
+  Mute: "<red>Mute <dark_gray>» %DURATION%"
+  MuteReason: " <red>Reason <dark_gray>» <gray>%REASON%"
+  Ban: "<red>Ban <dark_gray>» %DURATION%"
+  BanReason: " <red>Reason <dark_gray>» <gray>%REASON%"
+  Warn: "<red>Warns <dark_gray>» <gray>%COUNT%"
+  Note: "<red>Notes <dark_gray>» <gray>%COUNT%"

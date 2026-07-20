@@ -1,0 +1,77 @@
+name: PhantomBans
+version: '${project.version}'
+main: dev.hauch.phantomBans.bukkit.PhantomBans
+api-version: '1.18'
+load: POSTWORLD
+
+authors: [ Hauchdev ]
+description: A multi-platform punishment system
+
+commands:
+  ban:
+    description: Ban a player permanently
+    usage: /<command> [Name] [Reason]
+  tempban:
+    description: Temporarily ban a player
+    usage: /<command> [Name] [Duration] [Reason]
+  ipban:
+    description: IP ban a player
+    usage: /<command> [Name/IP] [Reason]
+  tempipban:
+    description: Temporarily IP ban a player
+    usage: /<command> [Name/IP] [Duration] [Reason]
+  mute:
+    description: Mute a player
+    usage: /<command> [Name] [Reason]
+  tempmute:
+    description: Temporarily mute a player
+    usage: /<command> [Name] [Duration] [Reason]
+  warn:
+    description: Warn a player
+    usage: /<command> [Name] [Reason]
+  tempwarn:
+    description: Temporarily warn a player
+    usage: /<command> [Name] [Duration] [Reason]
+  kick:
+    description: Kick a player
+    usage: /<command> [Name] [Reason]
+  note:
+    description: Add a note to a player
+    usage: /<command> [Name] [Note]
+  unban:
+    description: Unban a player
+    usage: /<command> [Name]
+  unmute:
+    description: Unmute a player
+    usage: /<command> [Name]
+  unwarn:
+    description: Remove a warning
+    usage: /<command> [ID] or /unwarn clear [Name]
+  unnote:
+    description: Remove a note
+    usage: /<command> [ID] or /unnote clear [Name]
+  unpunish:
+    description: Remove any punishment by ID
+    usage: /<command> [ID]
+  change-reason:
+    description: Change the reason of a punishment
+    usage: /<command> [ID] [New Reason]
+  banlist:
+    description: List all active bans
+    usage: /<command> [Page]
+  history:
+    description: View a player's punishment history
+    usage: /<command> [Name] [Page]
+  warns:
+    description: View your warnings
+    usage: /<command> [Name] [Page]
+  notes:
+    description: View your notes
+    usage: /<command> [Name] [Page]
+  check:
+    description: Check a player's punishment status
+    usage: /<command> [Name]
+  phantombans:
+    description: PhantomBans admin command
+    usage: /<command> [help|reload]
+    aliases: [pb]
