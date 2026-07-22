@@ -34,7 +34,7 @@
         <velocity-api.version>3.3.0-SNAPSHOT</velocity-api.version>
         <hikaricp.version>5.0.1</hikaricp.version>
         <hsqldb.version>2.7.1</hsqldb.version>
-        <commons-io.version>2.11.0</commons-io.version>
+        <commons-io.version>2.22.0</commons-io.version>
         <gson.version>2.10</gson.version>
         <bstats-base.version>3.0.0</bstats-base.version>
         <bstats-bukkit.version>3.0.0</bstats-bukkit.version>
