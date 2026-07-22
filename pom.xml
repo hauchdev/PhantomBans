@@ -31,7 +31,7 @@
         <!-- Dependency versions -->
         <paper-api.version>1.18.2-R0.1-SNAPSHOT</paper-api.version>
         <waterfall-api.version>1.18-R0.1-SNAPSHOT</waterfall-api.version>
-        <velocity-api.version>3.3.0-SNAPSHOT</velocity-api.version>
+        <velocity-api.version>3.5.1</velocity-api.version>
         <hikaricp.version>5.0.1</hikaricp.version>
         <hsqldb.version>2.7.1</hsqldb.version>
         <commons-io.version>2.11.0</commons-io.version>
